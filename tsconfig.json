@@ -1,0 +1,30 @@
+{
+    "extends": "./node_modules/gts/tsconfig.json",
+    "compilerOptions": {
+        "outDir": "build",
+        "target": "esnext",
+        "module": "commonjs",
+        "lib": [
+            "esnext"
+        ],
+        "moduleResolution": "node",
+        "rootDir": ".",
+        "baseUrl": ".",
+        "esModuleInterop": true,
+        "noImplicitAny": true,
+        "sourceMap": false,
+        "noImplicitReturns": false,
+        "resolveJsonModule": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "allowSyntheticDefaultImports": true,
+        "declaration": false,
+        "typeRoots": [
+            "node_modules/@types",
+            "src/@types"
+        ]
+    },
+    "include": [
+        "src/**/*"
+    ]
+}

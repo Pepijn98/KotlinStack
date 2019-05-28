@@ -1,0 +1,50 @@
+{
+    "name": "kotlin-stack",
+    "version": "0.0.1",
+    "description": "Tweet new questions from stackoverflow about Kotlin",
+    "main": "src/index.ts",
+    "engines": {
+        "node": ">=10.x",
+        "yarn": ">=1.16.0"
+    },
+    "homepage": "https://github.com/KurozeroPB/KotlinStack#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/KurozeroPB/KotlinStack.git"
+    },
+    "bugs": {
+        "email": "bugs@kurozeropb.info",
+        "url": "https://github.com/KurozeroPB/KotlinStack/issues"
+    },
+    "author": {
+        "email": "root@kurozeropb.info",
+        "name": "KurozeroPB",
+        "url": "https://kurozeropb.info"
+    },
+    "license": "MIT",
+    "scripts": {
+        "start": "cross-env NODE_ENV=production ts-node src/index.ts",
+        "prestart": "yarn check",
+        "test": "cross-env NODE_ENV=development ts-node src/index.ts",
+        "pretest": "yarn check",
+        "check": "gts check && yarn lint",
+        "lint": "eslint --ext .ts,.js .",
+        "lint:fix": "eslint --ext .ts,.js --fix .",
+        "gts:fix": "gts fix"
+    },
+    "dependencies": {
+        "rss-emitter-ts": "^0.3.0",
+        "twit": "^2.2.11"
+    },
+    "devDependencies": {
+        "@types/twit": "^2.2.21",
+        "@typescript-eslint/eslint-plugin": "^1.9.0",
+        "@typescript-eslint/parser": "^1.9.0",
+        "cross-env": "^5.2.0",
+        "eslint": "^5.16.0",
+        "gts": "^1.0.0",
+        "ts-node": "^8.2.0",
+        "tsconfig-paths": "^3.8.0",
+        "typescript": "^3.4.5"
+    }
+}
