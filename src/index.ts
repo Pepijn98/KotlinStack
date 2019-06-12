@@ -27,6 +27,10 @@ rss.on("item:new", async (item: FeedItem) => {
             } catch (e) {
                 console.error(e);
             }
+        } else {
+            console.warn("⚠ Item was published before start time");
         }
+    } else {
+        console.warn("⚠ Item did not have pubdate");
     }
 });
