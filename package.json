@@ -23,6 +23,7 @@
     },
     "license": "MIT",
     "scripts": {
+        "deploy": "pm2 start ecosystem.config.js --env production",
         "start": "cross-env NODE_ENV=production ts-node src/index.ts",
         "prestart": "yarn check",
         "test": "cross-env NODE_ENV=development ts-node src/index.ts",
